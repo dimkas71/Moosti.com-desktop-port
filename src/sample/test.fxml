@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox prefHeight="210.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoostiController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text id="timer-text" fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" textAlignment="JUSTIFY" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefWidth="600.0" spacing="5.0">
+         <children>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Button fx:id="buttonFocus" mnemonicParsing="false" onAction="#handleButtonFocus" text=".focus" />
+                  <Slider fx:id="sliderFocus" blockIncrement="1.0" max="60.0" snapToTicks="true" value="30.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0">
+               <children>
+                  <Button fx:id="buttonShortBreak" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleButtonShortBreak" text=".shrt brk" />
+                  <Slider fx:id="sliderShortBreak" blockIncrement="1.0" max="5.0" value="5.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Button fx:id="buttonLongBreak" mnemonicParsing="false" onAction="#handleButtonLongBreak" text=".long brk" />
+                  <Slider fx:id="sliderLongBreak" blockIncrement="1.0" max="30.0" value="20.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Button id="button-stop" fx:id="buttonStop" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleButtonStop" text=".stop" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@test.css" />
+   </stylesheets>
+</VBox>
