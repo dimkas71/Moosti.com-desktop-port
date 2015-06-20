@@ -6,9 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.util.StringConverter;
 
+import java.io.File;
 
 
 /**
@@ -59,21 +62,12 @@ public class MoostiController {
             @Override
             public void onFinish() {
                 stopTimer();
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        text.setText(Utils.fromMillis(0));
-                    }
-                });
+                play();
+                Platform.runLater(() -> text.setText(Utils.fromMillis(0)));
             }
             @Override
             public void onTick(long millisUntilFinished) {
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        text.setText(Utils.fromMillis(millisUntilFinished));
-                    }
-                });
+                Platform.runLater(() -> text.setText(Utils.fromMillis(millisUntilFinished)));
             }
         };
         timer.start();
@@ -98,6 +92,14 @@ public class MoostiController {
         stopTimer();
         text.setText(Utils.fromMillis(0));
 
+
+
+    }
+
+    private void play() {
+        final Media media = new Media(getClass().getResource("resources/ring_end.mp3").toString());
+        final MediaPlayer mp = new MediaPlayer(media);
+        mp.play();
     }
 
 }
