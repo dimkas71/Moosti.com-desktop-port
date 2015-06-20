@@ -1,4 +1,4 @@
-package sample;
+package com.moosti;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -51,7 +51,7 @@ public class Config {
 
     private Config() {
 
-        InputStream is = getClass().getResourceAsStream("resources/default.properties");
+        InputStream is = getClass().getResourceAsStream("default.properties");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
 

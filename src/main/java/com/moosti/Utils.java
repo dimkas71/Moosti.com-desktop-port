@@ -1,7 +1,7 @@
-package sample;
+package com.moosti;
 
 /**
- * Created by Пользователь on 17.06.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ on 17.06.2015.
  */
 public final class Utils {
 

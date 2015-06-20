@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
@@ -9,20 +10,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import java.net.URL?>
 
-<VBox prefHeight="250.0" prefWidth="600.0" stylesheets="@resources/slider.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoostiController">
+<VBox prefHeight="250.0" prefWidth="600.0" stylesheets="@slider.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moosti.MoostiController">
    <children>
-      <Pane prefHeight="135.0" prefWidth="600.0" style="-fx-background-color: #4caf50;" VBox.vgrow="NEVER">
-         <VBox.margin>
-            <Insets bottom="10.0" />
-         </VBox.margin>
+      <Pane id="pane-header" prefHeight="101.0" prefWidth="600.0">
          <children>
-            <ImageView fitHeight="78.0" fitWidth="101.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="63.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
                <image>
-                  <Image url="@resources/ic_launcher_144.png" />
+                  <Image url="@ic_launcher_144.png" />
                </image>
             </ImageView>
-            <Text layoutX="97.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Moosti.com (Pomodoro technique)" wrappingWidth="457.64697265625">
+            <Text id="text-header" layoutX="78.0" layoutY="40.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Moosti.com (Pomodoro technique)" textAlignment="CENTER" wrappingWidth="457.64697265625">
                <font>
                   <Font size="26.0" />
                </font>
@@ -88,4 +87,5 @@
          </VBox.margin>
       </HBox>
    </children>
+
 </VBox>

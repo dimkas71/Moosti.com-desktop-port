@@ -1,4 +1,4 @@
-package sample;
+package com.moosti;
 
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
@@ -9,9 +9,6 @@ import javafx.scene.control.Slider;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
-import javafx.util.StringConverter;
-
-import java.io.File;
 
 
 /**
@@ -97,7 +94,7 @@ public class MoostiController {
     }
 
     private void play() {
-        final Media media = new Media(getClass().getResource("resources/ring_end.mp3").toString());
+        final Media media = new Media(getClass().getResource("ring_end.mp3").toString());
         final MediaPlayer mp = new MediaPlayer(media);
         mp.play();
     }

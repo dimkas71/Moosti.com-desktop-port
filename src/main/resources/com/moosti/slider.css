@@ -1,3 +1,16 @@
+.root {
+
+}
+
+#pane-header {
+    -fx-background-color:#4caf50;
+}
+
+#text-header {
+    -fx-fill: #4caf50;
+}
+
+
 .button {
     -fx-background-color:#4caf50;
     -fx-text-fill:white;    

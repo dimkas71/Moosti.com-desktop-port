@@ -1,15 +1,15 @@
-package sample.test;
+package com.moosti.test;
 
+import com.moosti.Utils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import sample.Utils;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 /**
- * Created by Пользователь on 17.06.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ on 17.06.2015.
  */
 @RunWith(value = JUnit4.class)
 public class UtilsTest {

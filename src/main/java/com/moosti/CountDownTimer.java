@@ -1,10 +1,10 @@
-package sample;
+package com.moosti;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by Пользователь on 17.06.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ on 17.06.2015.
  */
 public abstract class CountDownTimer {
 
