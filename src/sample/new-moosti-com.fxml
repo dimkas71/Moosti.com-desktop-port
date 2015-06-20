@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="250.0" prefWidth="600.0" stylesheets="@resources/slider.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MoostiController">
+   <children>
+      <Pane prefHeight="135.0" prefWidth="600.0" style="-fx-background-color: #4caf50;" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="101.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/ic_launcher_144.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="97.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Moosti.com (Pomodoro technique)" wrappingWidth="457.64697265625">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER">
+         <children>
+            <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #4caf50;" text="00:00" textAlignment="CENTER" wrappingWidth="599.0673828125" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="67.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="146.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="SOMETIMES">
+         <children>
+            <VBox>
+               <children>
+                  <Button fx:id="buttonFocus" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#handleButtonFocus" prefHeight="70.0" text=".focus(60)">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Slider fx:id="sliderFocus" blockIncrement="1.0" max="60.0" value="30.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Button fx:id="buttonShortBreak" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#handleButtonShortBreak" prefHeight="70.0" text=".sht brk(5)">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Slider fx:id="sliderShortBreak" blockIncrement="1.0" max="5.0" value="5.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Button fx:id="buttonLongBreak" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#handleButtonLongBreak" prefHeight="70.0" text=".long brk(35)" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Slider fx:id="sliderLongBreak" blockIncrement="1.0" max="30.0" value="20.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Button id="button-stop" fx:id="buttonStop" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonStop" prefHeight="70.0" text=".stop" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

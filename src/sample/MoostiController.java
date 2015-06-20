@@ -1,15 +1,15 @@
 package sample;
 
 import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.beans.property.StringPropertyBase;
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.text.Text;
 import javafx.util.StringConverter;
+
+
 
 /**
  * Created by Dimkas71 on 17.06.2015.
@@ -35,48 +35,12 @@ public class MoostiController {
     @FXML
     public void initialize() {
 
-        buttonFocus.textProperty().bindBidirectional(sliderFocus.valueProperty(), new StringConverter<Number>() {
-            @Override
-            public String toString(Number number) {
-
-                return Config.getInstance().getButtonFocusText() + "("
-                        +String.format("%2.0f", (Double)number).trim() + ")";
-            }
-
-            @Override
-            public Number fromString(String s) {
-                return null;
-            }
-        });
-
-        buttonShortBreak.textProperty().bindBidirectional(sliderShortBreak.valueProperty(), new StringConverter<Number>() {
-            @Override
-            public String toString(Number number) {
-
-                return Config.getInstance().getButtonShortBreakText() + "("
-                        + String.format("%2.0f", (Double)number).trim() + ")";
-            }
-
-            @Override
-            public Number fromString(String s) {
-                return null;
-            }
-        });
-
-        buttonLongBreak.textProperty().bindBidirectional(sliderLongBreak.valueProperty(), new StringConverter<Number>() {
-            @Override
-            public String toString(Number number) {
-
-                return  Config.getInstance().getButtonLongBreakText() + "(" +
-                        String.format("%2.0f", (Double)number).trim() + ")";
-            }
-
-            @Override
-            public Number fromString(String s) {
-                return null;
-            }
-        });
-
+        buttonFocus.textProperty().bind(Bindings.format(Config.getInstance().getButtonFocusText() + "(%2.0f)",
+                sliderFocus.valueProperty()));
+        buttonShortBreak.textProperty().bind(Bindings.format(Config.getInstance().getButtonShortBreakText() + "(%2.0f)",
+                sliderShortBreak.valueProperty()));
+        buttonLongBreak.textProperty().bind(Bindings.format(Config.getInstance().getButtonLongBreakText() + "(%2.0f)",
+                sliderLongBreak.valueProperty()));
 
     }
 

@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getResource("test.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("new-moosti-com.fxml"));
 
         primaryStage.setTitle("Moosti.com (Pomodoro technique)");
         Scene scene = new Scene(root, 600, 300);
