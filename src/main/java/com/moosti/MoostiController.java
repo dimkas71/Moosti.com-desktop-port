@@ -7,8 +7,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.media.Media;
+import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
+
+import java.net.URISyntaxException;
 
 
 /**
@@ -94,9 +97,18 @@ public class MoostiController {
     }
 
     private void play() {
-        final Media media = new Media(getClass().getResource("ring_end.mp3").toString());
-        final MediaPlayer mp = new MediaPlayer(media);
-        mp.play();
+        final Media media;
+        try {
+            media = new Media(getClass().getResource("ring_end.mp3").toURI().toString());
+            final MediaPlayer mp = new MediaPlayer(media);
+            mp.play();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (MediaException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 }

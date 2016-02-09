@@ -19,6 +19,12 @@ dependencies {
 }
 
 
+jar {
+    manifest {
+        attributes('Main-Class':'com.moosti.Main')
+    }
+}
+
 
 //apply from: 'javafx.plugin'
 apply from: "https://dl.bintray.com/content/shemnon/javafx-gradle/8.1.1/javafx.plugin"
