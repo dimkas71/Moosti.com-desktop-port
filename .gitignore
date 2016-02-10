@@ -1,9 +1,11 @@
 out/
 build/
 .gradle/
+.idea/libraries
+gradle/
 gradlew
 gradlew.bat
 .idea/workspace.xml
-
+Moosti.com-Application.iml
 
 

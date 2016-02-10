@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Moosti.com-Application:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Moosti_com_Application_jar</output-path>
+    <root id="archive" name="Moosti.com-Application.jar">
+      <element id="module-output" name="Moosti.com-Application" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jaco-mp3-player-0.9.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
